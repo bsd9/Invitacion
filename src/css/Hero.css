@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.hero img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.hero .date {
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+  font-size: 2.5rem;
+}

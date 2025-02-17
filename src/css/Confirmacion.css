@@ -1,0 +1,12 @@
+.confirmacion {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .whatsapp-btn {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.detalles {
+  background-color: #bfa3d669;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.icono {
+  margin-bottom: 10px;
+}
+
+.icono img {
+  width: 50px;
+}
+
+.detalles h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.detalles h2, .detalles h3 {
+  margin: 10px 0;
+}
+
+.detalles button {
+  background-color: #8d33d691;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.detalles button:hover {
+  background-color: #c1356d;
+}

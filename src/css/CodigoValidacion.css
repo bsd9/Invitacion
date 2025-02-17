@@ -1,0 +1,35 @@
+.codigo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.codigo-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.codigo-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.codigo-form button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #E6B8A2;
+    border: none;
+    border-radius: 5px;
+}
