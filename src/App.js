@@ -5,6 +5,8 @@ import Confirmacion from "./components/Confirmacion";
 import Vestimenta from "./components/Vestimenta";
 import Entradas from "./components/Entradas";
 import CodigoValidacion from "./components/CodigoValidacion";
+import Fiesta from "./images/toast_14300331.png";
+import Eucaristia from "./images/cup_8722085.png"
 import "./App.css";
 
 function App() {
@@ -51,7 +53,8 @@ function App() {
       <div className="cards-container">        
         <Detalles 
           titulo="Eucaristia"
-          icono="/images/"
+          icono={Eucaristia}
+          esVideo={false}
           fecha="Sabado 26 de abril de 2025"
           hora="1:00 PM"
           ubicacion="Salón VIP - Casa Samay" 
@@ -60,7 +63,8 @@ function App() {
 
         <Detalles 
           titulo="Recepción"
-          icono="/images/"
+          icono= {Fiesta}
+          esVideo={false}
           fecha="Sabado 26 de abril de 2025"
           hora="8:00 PM"
           ubicacion="Salón de Eventos Casa Samay" 

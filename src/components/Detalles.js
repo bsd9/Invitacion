@@ -1,11 +1,15 @@
 import React from "react";
 import "../css/Detalles.css";
 
-const Detalles = ({ fecha, ubicacion, link, icono, titulo, hora }) => {
+const Detalles = ({ fecha, ubicacion, link, icono, titulo, hora, esVideo }) => {
   return (
     <div className="detalles">
       <div className="icono">
-        <img src={icono} alt="Icono" />
+        {esVideo ? (
+          <video src={icono} alt="Icono" autoPlay loop muted />
+        ) : (
+          <img src={icono} alt="Icono" />
+        )}
       </div>
       <h1>{titulo}</h1>
       <h2>Día</h2>

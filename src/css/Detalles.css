@@ -22,8 +22,9 @@
   margin-bottom: 10px;
 }
 
-.icono img {
-  width: 50px;
+.icono img, .icono video {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .detalles h1 {
