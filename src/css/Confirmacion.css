@@ -1,12 +1,39 @@
 .confirmacion {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .whatsapp-btn {
-    background-color: #25d366;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
+  text-align: center;
+  padding: 20px;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(120deg, #5a5a5a, #8a8a8a, #5a5a5a);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  transition: left 0.5s ease-in-out;
+}
+
+.whatsapp-btn:hover::before {
+  left: 100%;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(120deg, #6e6e6e, #9e9e9e, #6e6e6e);
+  color: black;
+}

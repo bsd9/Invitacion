@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
+body {
+  color: rgb(0, 0, 0);
+  background: linear-gradient(120deg, #6e6e6e, #9e9e9e, #6e6e6e); /* Gris más oscuro */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .cards-container {
   display: flex;
   justify-content: space-around;
@@ -9,9 +15,9 @@
 }
 
 .detalles {
-  background-color: #bfa3d669;
+  background: linear-gradient(120deg, #5a5a5a, #8a8a8a, #5a5a5a); /* Efecto metálico más oscuro */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
   padding: 20px;
   width: 300px;
   text-align: center;
@@ -37,15 +43,36 @@
 }
 
 .detalles button {
-  background-color: #8d33d691;
+  background: linear-gradient(120deg, #5a5a5a, #8a8a8a, #5a5a5a);
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.detalles button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  transition: left 0.5s ease-in-out;
+}
+
+.detalles button:hover::before {
+  left: 100%;
 }
 
 .detalles button:hover {
-  background-color: #c1356d;
+  background: linear-gradient(120deg, #6e6e6e, #9e9e9e, #6e6e6e);
+  color: black;
 }

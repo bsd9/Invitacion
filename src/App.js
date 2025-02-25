@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Hero from "./components/Hero";
 import Detalles from "./components/Detalles";
 import Confirmacion from "./components/Confirmacion";
-import Vestimenta from "./components/Vestimenta";
 import Entradas from "./components/Entradas";
 import CodigoValidacion from "./components/CodigoValidacion";
 import Fiesta from "./images/toast_14300331.png";
@@ -10,26 +9,8 @@ import Eucaristia from "./images/cup_8722085.png"
 import "./App.css";
 
 function App() {
-  const [seccionActiva, setSeccionActiva] = useState(null);
   const [codigoValido, setCodigoValido] = useState(false);
   const [transitionVisible, setTransitionVisible] = useState(false);
-  const menuRef = useRef(null);
-  const contenidoRef = useRef(null);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        menuRef.current && !menuRef.current.contains(event.target) &&
-        contenidoRef.current && !contenidoRef.current.contains(event.target)
-      ) {
-        setSeccionActiva(null);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   function handleCodigoValido(codigo) {
     setCodigoValido(true);
@@ -56,9 +37,9 @@ function App() {
           icono={Eucaristia}
           esVideo={false}
           fecha="Sabado 26 de abril de 2025"
-          hora="1:00 PM"
-          ubicacion="Salón VIP - Casa Samay" 
-          link="https://maps.app.goo.gl/otherlink" 
+          hora="2:00 PM"
+          ubicacion="Capilla Sagrada Familia" 
+          link="https://maps.app.goo.gl/nZuRTwJb5Jjg3Guz5" 
         />
 
         <Detalles 
@@ -66,28 +47,13 @@ function App() {
           icono= {Fiesta}
           esVideo={false}
           fecha="Sabado 26 de abril de 2025"
-          hora="8:00 PM"
+          hora="6:00 PM"
           ubicacion="Salón de Eventos Casa Samay" 
           link="https://maps.app.goo.gl/Zmr7f5WSxAwQBfVM6" 
         />
       </div>
 
-      <nav ref={menuRef} className="menu">
-        <span onClick={() => setSeccionActiva(seccionActiva === "ubicacion" ? null : "ubicacion")}>Ubicación</span>
-        <span onClick={() => setSeccionActiva(seccionActiva === "vestimenta" ? null : "vestimenta")}>Vestimenta</span>
-        <span onClick={() => setSeccionActiva(seccionActiva === "confirmacion" ? null : "confirmacion")}>Confirmación</span>
-      </nav>
-
-      <div 
-        ref={contenidoRef} 
-        className={`contenido-invitacion ${transitionVisible ? "visible" : ""}`}
-      >
-        <div className="contenido">
-          {seccionActiva === "ubicacion" && <Detalles />}
-          {seccionActiva === "vestimenta" && <Vestimenta />}
-          {seccionActiva === "confirmacion" && <Confirmacion />}
-        </div>
-      </div>
+      <Confirmacion />
 
       <Entradas />
     </div>
