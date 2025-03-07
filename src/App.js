@@ -4,8 +4,8 @@ import Detalles from "./components/Detalles";
 import Confirmacion from "./components/Confirmacion";
 import Entradas from "./components/Entradas";
 import CodigoValidacion from "./components/CodigoValidacion";
-import Fiesta from "./images/toast_14300331.png";
-import Eucaristia from "./images/cup_8722085.png"
+import Fiesta from "./images/toast_14300331.svg";
+import Eucaristia from "./images/cup_8722085.svg"
 import "./App.css";
 
 function App() {

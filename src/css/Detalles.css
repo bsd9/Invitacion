@@ -2,7 +2,7 @@
 
 body {
   color: rgb(0, 0, 0);
-  background: linear-gradient(120deg, #6e6e6e, #9e9e9e, #6e6e6e); /* Gris más oscuro */
+  background: linear-gradient(120deg, #c19090, #f9d6d5, #e3b0b0);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .detalles {
-  background: linear-gradient(120deg, #5a5a5a, #8a8a8a, #5a5a5a); /* Efecto metálico más oscuro */
+  background: linear-gradient(120deg, #c19090, #eebbbb, #d7a5a5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
   padding: 20px;
@@ -43,8 +43,8 @@ body {
 }
 
 .detalles button {
-  background: linear-gradient(120deg, #5a5a5a, #8a8a8a, #5a5a5a);
-  color: white;
+  background: linear-gradient(120deg, #c19090, #eebbbb, #d7a5a5);
+  color: black;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -52,7 +52,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 8px rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -73,6 +73,6 @@ body {
 }
 
 .detalles button:hover {
-  background: linear-gradient(120deg, #6e6e6e, #9e9e9e, #6e6e6e);
+  background: linear-gradient(120deg, #d7a5a5, #f9d6d5, #f6c8c7);
   color: black;
 }

@@ -4,8 +4,8 @@
 }
 
 .whatsapp-btn {
-  background: linear-gradient(120deg, #5a5a5a, #8a8a8a, #5a5a5a);
-  color: white;
+  background: linear-gradient(120deg, #c19090, #eebbbb, #d7a5a5);
+  color: black;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -34,6 +34,6 @@
 }
 
 .whatsapp-btn:hover {
-  background: linear-gradient(120deg, #6e6e6e, #9e9e9e, #6e6e6e);
+  background: linear-gradient(120deg, #d7a5a5, #f9d6d5, #f6c8c7);
   color: black;
 }

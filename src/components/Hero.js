@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero">
       <p className="date">_________________26.04.2025_________________</p>
       <br/>
-      <h1>Mariana Fernanda <br/> Salazar Zuluaga</h1>
+      <h1>María Fernanda <br/> Salazar Zuluaga</h1>
       <br/>
       <p>
       Hoy celebro no solo mis 15 años, sino también cada momento que la vida me ha regalado. 
