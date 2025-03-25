@@ -40,6 +40,7 @@
     "@axe-core/react": "^4.10.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "codecov": "^3.8.2",
     "jest": "^27.5.1",
     "jest-axe": "^10.0.0"
   },
