@@ -10,6 +10,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://bsd9.github.io/Invitacion",
   "scripts": {
     "test": "react-scripts test",
     "test:unit": "react-scripts test --watchAll=false --testPathPattern=__tests__/unit",
@@ -17,7 +18,8 @@
     "test:ci": "react-scripts test --watchAll=false --ci --coverage",
     "test:all": "npm run test:unit && npm run test:integration",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +45,7 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "codecov": "^3.8.2",
+    "gh-pages": "^6.3.0",
     "jest": "^27.5.1",
     "jest-axe": "^10.0.0"
   },
