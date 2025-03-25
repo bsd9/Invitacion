@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Hero coincide con el snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="hero"
+    data-testid="hero-container"
+  >
+    <p
+      class="date"
+      data-testid="hero-fecha"
+    >
+      _________________26.04.2025_________________
+    </p>
+    <br />
+    <h1
+      data-testid="hero-nombre"
+    >
+      María Fernanda
+      <br />
+      Salazar Zuluaga
+    </h1>
+    <br />
+    <p
+      data-testid="hero-mensaje"
+    >
+      Mensaje de prueba para el hero
+    </p>
+  </div>
+</DocumentFragment>
+`;

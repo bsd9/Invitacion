@@ -6,6 +6,7 @@ import "../css/CodigoValidacion.css";
 function CodigoValidacion({ onCodigoValido }) {
   const [codigo, setCodigo] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   async function validarCodigo() {
     if (!codigo) {
@@ -13,13 +14,22 @@ function CodigoValidacion({ onCodigoValido }) {
       return;
     }
 
-    const docRef = doc(db, "invitados", codigo);
-    const docSnap = await getDoc(docRef);
+    setIsLoading(true);
+    setError("");
 
-    if (docSnap.exists()) {
-      onCodigoValido(docSnap.data().numeroEntradas);
-    } else {
-      setError("Código inválido. Inténtalo de nuevo.");
+    try {
+      const docRef = doc(db, "invitados", codigo);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        onCodigoValido(docSnap.data().numeroEntradas);
+      } else {
+        setError("Código inválido. Inténtalo de nuevo.");
+      }
+    } catch (err) {
+      setError("Error al validar el código");
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -32,9 +42,19 @@ function CodigoValidacion({ onCodigoValido }) {
           value={codigo}
           onChange={(e) => setCodigo(e.target.value)}
           placeholder="Código"
+          disabled={isLoading}
         />
-        <button onClick={validarCodigo}>Validar</button>
+        <button onClick={validarCodigo} disabled={isLoading}>
+          {isLoading ? "Validando..." : "Validar"}
+        </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
+        
+        {isLoading && (
+          <div className="loading-modal" data-testid="loading-modal">
+            <div className="loading-spinner"></div>
+            <p>Validando código...</p>
+          </div>
+        )}
       </div>
     </div>
   );
