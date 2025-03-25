@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import "../css/CodigoValidacion.css";
@@ -8,8 +8,17 @@ function CodigoValidacion({ onCodigoValido }) {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  // Limpieza cuando el componente se desmonta o cuando onCodigoValido cambia
+  useEffect(() => {
+    return () => {
+      setCodigo("");
+      setError("");
+      setIsLoading(false);
+    };
+  }, [onCodigoValido]);
+
   async function validarCodigo() {
-    if (!codigo) {
+    if (!codigo.trim()) {
       setError("Por favor, ingresa un código.");
       return;
     }
@@ -23,11 +32,14 @@ function CodigoValidacion({ onCodigoValido }) {
 
       if (docSnap.exists()) {
         onCodigoValido(docSnap.data().numeroEntradas);
+        // Limpiar el campo de código después de una validación exitosa
+        setCodigo("");
       } else {
         setError("Código inválido. Inténtalo de nuevo.");
       }
     } catch (err) {
-      setError("Error al validar el código");
+      setError("Error al conectar con el servidor");
+      console.error("Error validando código:", err);
     } finally {
       setIsLoading(false);
     }
@@ -44,10 +56,13 @@ function CodigoValidacion({ onCodigoValido }) {
           placeholder="Código"
           disabled={isLoading}
         />
-        <button onClick={validarCodigo} disabled={isLoading}>
+        <button 
+          onClick={validarCodigo} 
+          disabled={isLoading}
+        >
           {isLoading ? "Validando..." : "Validar"}
         </button>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="error-message">{error}</p>}
         
         {isLoading && (
           <div className="loading-modal" data-testid="loading-modal">
