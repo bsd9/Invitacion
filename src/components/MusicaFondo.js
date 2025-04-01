@@ -46,7 +46,7 @@ function MusicaFondo() {
         {isPlaying ? "⏸" : "▶"}
       </button>
       <audio ref={audioRef} loop>
-        <source src="/audio/Cancion.mp3" type="audio/mp3" />
+        <source src="/Invitacion/audio/Cancion.mp3" type="audio/mp3" />
       </audio>
     </div>
   );
