@@ -19,7 +19,7 @@ describe('Componente Confirmacion', () => {
     
     const link = screen.getByRole('link');
     
-    expect(link).toHaveAttribute('href', 'https://wa.me/3206684825');
+    expect(link).toHaveAttribute('href', 'https://wa.me/573206684825');
     
     const button = screen.getByText('Confirmar por WhatsApp');
     expect(link).toContainElement(button);
