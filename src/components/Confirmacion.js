@@ -5,7 +5,7 @@ const Confirmacion = () => {
   return (
     <div className="confirmacion">
       <h2>Confirma tu asistencia</h2>
-      <a href="https://wa.me/3206684825">
+      <a href="https://wa.me/573206684825">
         <button className="whatsapp-btn">Confirmar por WhatsApp</button>
       </a>
     </div>
