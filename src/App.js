@@ -14,10 +14,9 @@ function App() {
   const [transitionVisible, setTransitionVisible] = useState(false);
   const [cantidadEntradas, setCantidadEntradas] = useState(0);
 
-  // Contenido para el componente Hero
   const heroContent = {
     fecha: "26.04.2025",
-    nombre: "María Fernanda\nSalazar Zuluaga", // Usamos \n para el salto de línea
+    nombre: "María Fernanda\nSalazar Zuluaga",
     mensaje: `Hoy celebro no solo mis 15 años, sino también cada momento que la vida me ha regalado. 
     Gracias por las experiencias que me han formado, por los aprendizajes, las sonrisas y hasta por los desafíos que me han enseñado a ser más fuerte. 
     Estoy agradecida por todo lo vivido y emocionada por lo que aún está por venir. ¡Gracias, vida, por cada regalo que me has dado!`
